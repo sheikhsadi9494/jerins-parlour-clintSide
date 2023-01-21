@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import React, { useEffect, useState } from "react";
 
-const OurServices = ({ selectedDate }) => {
+const OurServices = ({ selectedDate, setAppointment}) => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,9 @@ const OurServices = ({ selectedDate }) => {
                   {/* <p className="text-primary text-center text-xl font-semibold" >${service.price}</p> */}
                   <p className="text-lg text-center px-5" >{service.discription}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary mx-auto mt-3 text-white">Book Appointment</button>
+                      <label onClick={() => setAppointment(service)} htmlFor="book-appointment-modal" className="btn btn-primary mx-auto mt-3 text-white">
+                       Book Appointment
+                      </label> 
                   </div>
                 </div>
               </div>
