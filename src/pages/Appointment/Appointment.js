@@ -4,7 +4,9 @@ import OurServices from './OurServices';
 
 const Appointment = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
-
+    if(!selectedDate){
+        setSelectedDate(new Date())
+    }
     return (
         <div>
             <AppointmentBanner selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
