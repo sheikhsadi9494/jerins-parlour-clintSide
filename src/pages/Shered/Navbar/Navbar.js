@@ -5,32 +5,30 @@ import logo from "../../../assets/logo.png";
 const Navbar = () => {
   const links = (
     <>
-      <li>
-        <Link to="/" className="bg-none">
-          Home
-        </Link>
+      <li className="">
+        <Link to="/">Home</Link>
       </li>
 
-      <li>
-        <Link to="/appointment" className="bg-none">
-          Get Appointment
-        </Link>
+      <li className="">
+        <Link to="/appointment">Get Appointment</Link>
       </li>
 
-      <li>
+      <li className="">
         <a>Our Team</a>
       </li>
-      <li>
+      <li className="">
         <a>Contact us</a>
       </li>
-      <li>
-        <button className="btn-primary text-white px-9">Login</button>
+      <li className="bg-primary rounded">
+        <Link className="btn btn-primary text-white px-9" to="login">
+          Login
+        </Link>
       </li>
     </>
   );
   return (
     <div>
-      <div className="navbar bg-secondary py-6 lg:px-16">
+      <div className="navbar bg-secondary py-4 lg:px-16">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
